@@ -1,0 +1,13 @@
+<p class="sizeup">
+  All <span [ngClass]="{'green': true}">Beginner courses are colored green</span>, all <span class="yellow">intermediate courses are colored blue</span> 
+  and all <span class="red">advanced courses are colored red</span>.
+</p>
+<ul>
+  <li *ngFor="let course of courses" 
+  [ngClass]="{'green':course.level==='Beginner', 
+             'yellow':course.level==='Intermediate',
+             'red':course.level==='Advanced',
+             'sizeup':true}">
+    {{ course.name }}
+    </li>
+</ul>
